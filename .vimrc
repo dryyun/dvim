@@ -1,17 +1,17 @@
-syntax enable
-set background=dark
-colorscheme molokai
 set number
 set showcmd 
-
 set hlsearch
 set incsearch
+set winheight=8
+set winminheight=5
+
+set background=dark
+colorscheme molokai
 
 let g:molokai_original = 1
 let g:rehash256 = 1
 
-set winheight=8
-set winminheight=5
+syntax enable
 
 " Start from Vundle https://github.com/VundleVim/Vundle.vim
 
