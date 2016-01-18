@@ -7,7 +7,7 @@ Install
 
 >git submodule update --init --recursive
 
->cp .vimrc ~
+>ln -s ~/.vim/.vimrc ~/.vimrc
 
 
 Install Plugins:
