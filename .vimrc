@@ -5,6 +5,8 @@ set incsearch
 set winheight=8
 set winminheight=5
 
+set mouse=a
+
 set background=dark
 colorscheme molokai
 
