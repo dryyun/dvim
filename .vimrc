@@ -50,7 +50,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree' " NERDTree
 Plugin 'Xuyuanp/nerdtree-git-plugin' " NERDTree git plugin
 Plugin 'bling/vim-airline'
-
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 " My Plugins
 
 " All of your Plugins must be added before the following line
@@ -76,6 +77,7 @@ filetype plugin indent on    " required
 
 " For NERDTree
 
+map <F1> :NERDTreeToggle<CR> " F1 打开/关闭
 " autocmd vimenter * NERDTree " 开启vim的时候就启动NERDTree
 " let NERDTreeShowHidden=1 " 显示隐藏文件
 " for nerdtree-git-plugin
