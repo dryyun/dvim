@@ -2,10 +2,15 @@ set number
 set showcmd 
 set hlsearch
 set incsearch
+set ignorecase
 set winheight=8
 set winminheight=5
+set nowrap	" 不自动换行
+set bs=2                    "在insert模式下用退格键删除
 
 set mouse=a
+
+set clipboard=unnamed " 把vim剪切板中的内容放到系统剪切板, 选中内容 + y 也行
 
 set background=dark
 colorscheme molokai
@@ -16,6 +21,7 @@ let g:rehash256 = 1
 syntax enable
 
 " Start from Vundle https://github.com/VundleVim/Vundle.vim
+" Vundle 插件管理
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -29,22 +35,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"""""" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"""""" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"""""" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"""""" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"""""" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"""""" Plugin 'user/L9', {'name': 'newL9'}
-
 " My Plugins
 
 Plugin 'scrooloose/nerdtree' " NERDTree
@@ -52,6 +42,9 @@ Plugin 'Xuyuanp/nerdtree-git-plugin' " NERDTree git plugin
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'dyng/ctrlsf.vim'
+
 " My Plugins
 
 " All of your Plugins must be added before the following line
@@ -70,10 +63,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " End from Vundle https://github.com/VundleVim/Vundle.vim
+" Vundle 插件管理
 
-" common configure
-
-" common configure
 
 " For NERDTree
 
@@ -103,3 +94,7 @@ let Powerline_symbols='fancy'
 set laststatus=2
 
 " For airline
+
+" For Search
+
+nnoremap <S-f> :CtrlSF<space> 
