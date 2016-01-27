@@ -18,6 +18,8 @@ colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 
+let mapleader = ","
+
 syntax enable
 
 " Start from Vundle https://github.com/VundleVim/Vundle.vim
@@ -39,12 +41,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree' " NERDTree
 Plugin 'Xuyuanp/nerdtree-git-plugin' " NERDTree git plugin
+Plugin 'scrooloose/syntastic' " 语法检查
+Plugin 'scrooloose/nerdcommenter' " 
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'dyng/ctrlsf.vim'
-
+Plugin 'stephpy/vim-php-cs-fixer'
 " My Plugins
 
 " All of your Plugins must be added before the following line
@@ -98,3 +101,15 @@ set laststatus=2
 " For Search
 
 nnoremap <S-f> :CtrlSF<space> 
+
+" For syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_php_checkers=['php']
