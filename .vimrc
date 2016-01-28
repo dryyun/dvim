@@ -48,6 +48,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'vim-ruby/vim-ruby'
 " My Plugins
 
 " All of your Plugins must be added before the following line
@@ -113,3 +115,5 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_php_checkers=['php']
+
+noremap <F3> :Autoformat<CR>
