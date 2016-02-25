@@ -44,13 +44,14 @@ Plugin 'Xuyuanp/nerdtree-git-plugin' " NERDTree git plugin
 Plugin 'scrooloose/syntastic' " 语法检查
 Plugin 'scrooloose/nerdcommenter' " 
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " My Plugins
 
 " All of your Plugins must be added before the following line
